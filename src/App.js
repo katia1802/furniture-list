@@ -3,7 +3,9 @@ import { createPromise } from "./services/furnitureService";
 import "./App.scss";
 import Loader from "./components/Loader";
 import FurnitureList from "./components/FurnitureList";
+import FurnitureCard from "./components/FurnitureCard";
 import Filter from "./components/Filter";
+import { Switch, Route } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -55,19 +57,55 @@ class App extends Component {
   }
 
   render() {
+    const { furnitureRawData } = this.state;
     const furnitureResults = this.filterByName();
     return (
       <div className="App">
-        <Filter
-          onKeySearch={this.getInputSearch}
-          userSearch={this.state.search}
-        />
+        <header>
+          <h1 className="app__header-title"> XXX Lutz</h1>
 
-          {this.state.isLoading ? (
-            <Loader />
-          ) : (
-            <FurnitureList furnitureResults={furnitureResults} />
-          )}
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <Filter
+                  onKeySearch={this.getInputSearch}
+                  userSearch={this.state.search}
+                />
+              )}
+            />
+          </Switch>
+        </header>
+        <main>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <div className="app__list">
+                  {this.state.isLoading ? (
+                    <Loader />
+                  ) : (
+                    <FurnitureList 
+                    furnitureResults={furnitureResults} />
+                  )}
+                </div>
+              )}
+            />
+            <Route
+              exact
+              path="/furniture/:id"
+              render={props => (
+                <FurnitureCard
+                  match={props.match}
+                  furnitureRawData={furnitureRawData}
+                  furnitureId={1}
+                />
+              )}
+            />
+          </Switch>
+        </main>
       </div>
     );
   }

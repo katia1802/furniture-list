@@ -1,0 +1,37 @@
+.furniture-link{
+    text-decoration: none;
+    color: #324B4F;
+}
+
+.furniture-list-container{
+    display: grid;
+    grid-template-columns: repeat(1, 75%);
+    margin-top: 80px;
+}
+.furniture-list{
+    list-style-type: none;
+}
+
+.furniture-item {
+    background-color: #EBF2FA;
+    opacity: 0.8;
+    padding-top: 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    border-radius: 4px;
+    text-align: center;
+    -webkit-box-shadow: 0 8px 6px -6px grey;
+    -moz-box-shadow: 0 8px 6px -6px grey;
+    box-shadow: 0 8px 6px -6px grey;
+    border: 1.5px solid #93A8AC;
+}
+
+@media all and (min-width: 500px){
+    .furniture-list-container {
+        grid-template-columns: repeat(2, 45%);   
+        grid-gap: 10px; 
+        justify-content: center;
+     
+    }
+}

@@ -1,0 +1,36 @@
+.furnitureSelected {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EBF2FA;
+    width: 65%;
+    height: 500px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.furnitureSelected-image{
+    height: 95px;
+    width: auto;
+    border-bottom: black solid 1px;
+}
+
+.furnitureSelected-info{
+    font-size: 30px;
+    color: #324B4F;
+}
+
+.furnitureSelected-name{
+    text-transform: uppercase
+}
+
+.furnitureSelected-final-price{
+    
+}
+
+.furnitureSelected-price-before{
+    text-decoration: line-through;
+    font-size: 18px;
+}

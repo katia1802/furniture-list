@@ -1,0 +1,45 @@
+
+.furniture-image {
+    height: 40px;
+    width: auto;
+    padding: 30px;
+    border-bottom: black solid 1px;
+}
+
+.furniture-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.furniture-name {
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+
+.furniture-prices {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: end;
+}
+
+.furniture-final-price {
+    font-size: 20px;
+}
+
+.furniture-price-before {
+    text-decoration: line-through;
+}
+
+.glowButton {
+    padding: 0 14px;
+    transition: all 0.3s ease;
+}
+
+.glowButton:hover {
+    background: rgba(234, 236, 236, 0.72);
+    border-color: #00a984;
+    box-shadow: 0 0 25px 1px #00a984;
+}

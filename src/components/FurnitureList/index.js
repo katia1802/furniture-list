@@ -1,31 +1,38 @@
 import React, { Component } from "react";
 import "./FurnitureList.scss";
-import GoBack from "../GoBack";
-import Furniture from '../Furniture'
+import Furniture from "../Furniture";
+import { Link } from "react-router-dom";
 
 class FurnitureList extends Component {
   render() {
-    const { furnitureResults } = this.props;
-    if (furnitureResults.length === 0) {
-      return (
-        <div>
-          <GoBack />
+    const {furnitureResults}  = this.props;
+    console.log ('furnitureResults', furnitureResults)
 
-        </div>
-      );
+    if (furnitureResults.length === 0) {
+      return <div>No data found</div>
     } else {
       return (
-        <div>
+        <div className="furniture-list-container">
           {furnitureResults.map((furniture, index) => {
-                return (
-                  <Furniture 
-                  index = {index}
-                  image = {furniture.image}
-                  name = {furniture.name}
-                  brand = {furniture.brand}
-                  price = {furniture.price}
-                  priceSale = {furniture.priceSale}
-                  />)
+            return (
+              <ul className="furniture-list">
+                <li className="furniture-item glowButton" key={index}>
+                  <Link
+                    className="furniture-link"
+                    to={`/furniture/${furniture.id}`}
+                  >
+                    <Furniture
+                      // index={furniture.id}
+                      image={furniture.image}
+                      name={furniture.name}
+                      brand={furniture.brand}
+                      price={furniture.price}
+                      priceSale={furniture.priceSale}
+                    />
+                  </Link>
+                </li>
+              </ul>
+            );
           })}
         </div>
       );

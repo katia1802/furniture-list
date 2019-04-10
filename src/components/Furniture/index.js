@@ -1,19 +1,24 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
+import "./Furniture.scss";
 
 class Furniture extends Component {
   render() {
-    const { index, image, name, brand, price, priceSale } = this.props;
-    console.log (this.props)
+    const { image, name, brand, price, priceSale } = this.props;
+    // console.log('this.props', this.props);
     return (
-      <ul>
-    <li key={index}>
-          <img alt={name} src={image} />
-          <p>Name: {name}</p>
-          <p>Brand: {brand}</p>
-          <div>Price: {price}€</div>
-          <div>Price Sale: {priceSale}€</div>
-        </li>
-      </ul>
+      <Fragment>
+        <img className="furniture-image" alt={name} src={image} />
+        <div className="furniture-info">
+          <div className="furniture-names">
+            <p className="furniture-name">{name}</p>
+            <p className="furniture-brand">{brand}</p>
+          </div>
+          <div className="furniture-prices">
+            <div className="furniture-final-price">{priceSale}€</div>
+            <div className="furniture-price-before"> before: {price}€</div>
+          </div>
+        </div>
+      </Fragment>
     );
   }
 }
