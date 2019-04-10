@@ -41,6 +41,30 @@
     }
 
     .furnitureSelected-image{
-    height: 200px;
+    height: 150px;
+    }
+    .furnitureSelected-info{
+    font-size: 45px;
+    }
+    .furnitureSelected-price-before{
+        font-size: 35px;
+ 
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .furnitureSelected {
+    height: 1300px;
+    }
+
+    .furnitureSelected-image{
+    height: 350px;
+    }
+    .furnitureSelected-info{
+    font-size: 65px;
+    }
+    .furnitureSelected-price-before{
+        font-size: 50px;
+ 
     }
 }

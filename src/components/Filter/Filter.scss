@@ -19,3 +19,13 @@
         font-size: 40px;
     }
 }
+
+@media all and (min-width: 1200px) {
+    .app__filter-item {
+        padding: 15px;
+    }
+    
+    .app__filter-name {
+        font-size: 60px;
+    }
+}
