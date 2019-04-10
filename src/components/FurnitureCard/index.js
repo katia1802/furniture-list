@@ -6,7 +6,7 @@ class FurnitureCard extends Component {
   render() {
     const { furnitureRawData } = this.props;
     const furnitureId = this.props.match.params.id;
-    // console.log("furnitureRawData", furnitureRawData);
+    console.log("furnitureRawData", furnitureRawData);
 
     if (
       furnitureRawData.length === 0 
@@ -16,17 +16,20 @@ class FurnitureCard extends Component {
       return <div>No Data</div>;
     } else {
       const furnitureSelected = furnitureRawData[furnitureId];
-      // const image = furnitureSelected.image;
-      // const name = furnitureSelected.name;
-      // const brand = furnitureSelected.brand;
-      // const price = furnitureSelected.price;
-      // const priceSale = furnitureSelected.priceSale;
+      const image = furnitureSelected.image;
+      const name = furnitureSelected.name;
+      const brand = furnitureSelected.brand;
+      const price = furnitureSelected.price;
+      const priceSale = furnitureSelected.priceSale;
 
       return (
         <Fragment>
-          {/* <div className="furnitureSelected">
+          <div className="furnitureSelected">
 
-          <img className="furnitureSelected-image" alt={name} src={image} />
+          <img className="furnitureSelected-image" 
+          alt={name} 
+          src={image}
+           />
           <div className="furnitureSelected-info">
             <div className="furnitureSelected-names">
               <p className="furnitureSelected-name">{name}</p>
@@ -39,7 +42,7 @@ class FurnitureCard extends Component {
               </div>
             </div>
           </div>
-          </div> */}
+          </div>
           <GoBack />
         </Fragment>
       );

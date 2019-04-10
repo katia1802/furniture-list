@@ -6,23 +6,23 @@ import { Link } from "react-router-dom";
 class FurnitureList extends Component {
   render() {
     const {furnitureResults}  = this.props;
-    console.log ('furnitureResults', furnitureResults)
 
     if (furnitureResults.length === 0) {
       return <div>No data found</div>
     } else {
       return (
         <div className="furniture-list-container">
-          {furnitureResults.map((furniture, index) => {
+          {furnitureResults.map((furniture) => {
+            // console.log ('furniture', furniture)
             return (
-              <ul className="furniture-list">
-                <li className="furniture-item glowButton" key={index}>
+              <ul className="furniture-list" key={furniture.id}>
+                <li className="furniture-item glowButton" >
                   <Link
                     className="furniture-link"
                     to={`/furniture/${furniture.id}`}
                   >
                     <Furniture
-                      // index={furniture.id}
+                      id={furniture.id}
                       image={furniture.image}
                       name={furniture.name}
                       brand={furniture.brand}
