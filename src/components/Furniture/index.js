@@ -15,7 +15,7 @@ class Furniture extends Component {
           </div>
           <div className="furniture-prices">
             <div className="furniture-final-price">{priceSale}€</div>
-            <div className="furniture-price-before"> before: {price}€</div>
+            <div className="furniture-price-before"> before {price}€</div>
           </div>
         </div>
       </Fragment>

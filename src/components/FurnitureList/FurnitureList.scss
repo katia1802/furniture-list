@@ -17,7 +17,7 @@
     opacity: 0.8;
     padding-top: 0;
     width: 100%;
-    height: auto;
+    height: 250px;
     text-align: center;
     border-radius: 4px;
     text-align: center;
@@ -28,10 +28,22 @@
 }
 
 @media all and (min-width: 500px){
+
+    .furniture-item {
+        height: 450px;
+    }
     .furniture-list-container {
         grid-template-columns: repeat(2, 45%);   
         grid-gap: 10px; 
         justify-content: center;
-     
+        margin-right: 40px;
+    }
+
+}
+
+@media all and (min-width: 1000px){
+    .furniture-list-container {
+        grid-template-columns: repeat(3, 30%);   
     }
 }
+

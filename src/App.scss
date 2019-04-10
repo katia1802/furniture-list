@@ -15,3 +15,10 @@ background-attachment: fixed;
     font-size: 40px;
     color: #324B4F;
 }
+
+@media all and (min-width: 500px) {
+    .app__header-title {
+        font-size: 90px;
+
+    }
+}

@@ -6,8 +6,6 @@ class FurnitureCard extends Component {
   render() {
     const { furnitureRawData } = this.props;
     const furnitureId = this.props.match.params.id;
-    console.log("furnitureRawData", furnitureRawData);
-
     if (
       furnitureRawData.length === 0 
       ||
@@ -42,8 +40,9 @@ class FurnitureCard extends Component {
               </div>
             </div>
           </div>
-          </div>
           <GoBack />
+          </div>
+
         </Fragment>
       );
     }

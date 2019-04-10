@@ -21,10 +21,15 @@ class App extends Component {
 
   componentDidMount() {
     createPromise().then(data => {
+      console.log ('data', data)
+      const cleanData = data.map((item, index)=>{
+        return {...item, id:index}
+      })
+
       setTimeout(
         () =>
           this.setState({
-            furnitureRawData: data,
+            furnitureRawData: cleanData,
             isLoading: false
           }),
 

@@ -8,7 +8,7 @@ class GoBack extends Component {
     return (
       <div className="go-back">
         <Link to="/">
-          Go Back
+          Go back
         </Link>
         </div>
     );

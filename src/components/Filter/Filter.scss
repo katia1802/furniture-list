@@ -13,3 +13,9 @@
     outline: none;
     text-align: center;
 }
+
+@media all and (min-width: 500px) {
+    .app__filter-name {
+        font-size: 40px;
+    }
+}

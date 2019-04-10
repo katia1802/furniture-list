@@ -34,3 +34,13 @@
     text-decoration: line-through;
     font-size: 18px;
 }
+
+@media all and (min-width: 500px) {
+    .furnitureSelected {
+    height: 800px;
+    }
+
+    .furnitureSelected-image{
+    height: 200px;
+    }
+}
