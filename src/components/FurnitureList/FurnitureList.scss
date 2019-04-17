@@ -3,12 +3,16 @@
     color: #324B4F;
 }
 
-.furniture-list-container{
+// .furniture-list-container{
+//     display: grid;
+//     grid-template-columns: repeat(1, 75%);
+//     margin-top: 80px;
+// }
+.furniture-list{
     display: grid;
     grid-template-columns: repeat(1, 75%);
+    grid-gap: 20px;
     margin-top: 80px;
-}
-.furniture-list{
     list-style-type: none;
 }
 
