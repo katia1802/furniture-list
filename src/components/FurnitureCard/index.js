@@ -14,12 +14,13 @@ class FurnitureCard extends Component {
       return <div>No Data</div>;
     } else {
       const furnitureSelected = furnitureRawData[furnitureId];
-      const image = furnitureSelected.image;
-      const name = furnitureSelected.name;
-      const brand = furnitureSelected.brand;
-      const price = furnitureSelected.price;
-      const priceSale = furnitureSelected.priceSale;
-
+      // const image = furnitureSelected.image;
+      // const name = furnitureSelected.name;
+      // const brand = furnitureSelected.brand;
+      // const price = furnitureSelected.price;
+      // const priceSale = furnitureSelected.priceSale;
+      const {image, name, brand, priceSale, price} = furnitureSelected
+      
       return (
         <Fragment>
           <div className="furnitureSelected">
