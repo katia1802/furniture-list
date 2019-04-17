@@ -4,7 +4,7 @@ import './FurnitureCard.scss'
 
 class FurnitureCard extends Component {
   render() {
-    const { furnitureRawData } = this.props;
+    const { furnitureRawData} = this.props;
     const furnitureId = this.props.match.params.id;
     if (
       furnitureRawData.length === 0 
